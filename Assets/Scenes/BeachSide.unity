@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1.3
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 1651072915}
+  m_SkyboxMaterial: {fileID: 65922300}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -232,6 +232,65 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42021300}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &65922300
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shader Graphs_SkyboxBlender
+  m_Shader: {fileID: -6465566751694194690, guid: 23d5725b678aba14b895b06fa9b3505a, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _SKYOUTPUT_A
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Cubemap_Day:
+        m_Texture: {fileID: 8900000, guid: 8fa4fedf13c1a8a44904553ecc5b5a1d, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Cubemap_Evening:
+        m_Texture: {fileID: 8900000, guid: 896b9da9b4029944fb571a2313d94de7, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Cubemap_Midnight:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Cubemap_Morning:
+        m_Texture: {fileID: 8900000, guid: a068c526daeca0c4ea9bdbec9a251bd6, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Cubemap_Night:
+        m_Texture: {fileID: 8900000, guid: a64d2362d418d194f91274685fb10faf, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BUILTIN_QueueControl: 0
+    - _BUILTIN_QueueOffset: 0
+    - _BlendValue: 0.05
+    - _SKYOUTPUT: 0
+    - _TimeOfDay: 0
+    - _TimeScale: 1
+    m_Colors: []
+  m_BuildTextureStacks: []
+--- !u!1 &121368724 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 140570, guid: 6a76d3dcd348f084685cb525458806e1, type: 3}
+  m_PrefabInstance: {fileID: 967164111}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &122317749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4702229198241056, guid: 0ba258545da721e488ecb71ffd143b6f, type: 3}
@@ -1835,7 +1894,7 @@ Transform:
   m_GameObject: {fileID: 694587393}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 345.22, y: 9.205923, z: 121.78}
+  m_LocalPosition: {x: 345.538, y: 9.935, z: 121.469}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2063,7 +2122,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 3.2e-44, z: 6.07e-42, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 9.1837e-41, w: -1.11e-42}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2564,7 +2623,7 @@ Transform:
   m_GameObject: {fileID: 925960080}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 345.22, y: 9.205923, z: 120.05}
+  m_LocalPosition: {x: 345.49, y: 9.941, z: 119.786}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2596,15 +2655,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 434314, guid: 6a76d3dcd348f084685cb525458806e1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.149933
+      value: 4.15
       objectReference: {fileID: 0}
     - target: {fileID: 434314, guid: 6a76d3dcd348f084685cb525458806e1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.1634
+      value: -21.88
       objectReference: {fileID: 0}
     - target: {fileID: 434314, guid: 6a76d3dcd348f084685cb525458806e1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -31.242126
+      value: -31.23
       objectReference: {fileID: 0}
     - target: {fileID: 434314, guid: 6a76d3dcd348f084685cb525458806e1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2637,7 +2696,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 140570, guid: 6a76d3dcd348f084685cb525458806e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 976172884}
   m_SourcePrefab: {fileID: 100100000, guid: 6a76d3dcd348f084685cb525458806e1, type: 3}
 --- !u!1 &969218972
 GameObject:
@@ -2695,6 +2757,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 434314, guid: 6a76d3dcd348f084685cb525458806e1, type: 3}
   m_PrefabInstance: {fileID: 967164111}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &976172884
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121368724}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 80492071631ffe442bdaacf7b2e4a9f3, type: 3}
 --- !u!4 &1056736367 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4548539680920072, guid: 6fc2010b5899cfd488a0ddf205679e2b, type: 3}
@@ -4067,60 +4151,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71442e8cd72511e4fabb72f1a2cc82dd, type: 3}
---- !u!21 &1651072915
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_SkyboxBlender
-  m_Shader: {fileID: -6465566751694194690, guid: 23d5725b678aba14b895b06fa9b3505a, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords:
-  - _SKYOUTPUT_A
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _Cubemap_Day:
-        m_Texture: {fileID: 8900000, guid: 8fa4fedf13c1a8a44904553ecc5b5a1d, type: 2}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Cubemap_Evening:
-        m_Texture: {fileID: 8900000, guid: 896b9da9b4029944fb571a2313d94de7, type: 2}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Cubemap_Midnight:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Cubemap_Morning:
-        m_Texture: {fileID: 8900000, guid: a068c526daeca0c4ea9bdbec9a251bd6, type: 2}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Cubemap_Night:
-        m_Texture: {fileID: 8900000, guid: a64d2362d418d194f91274685fb10faf, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _BUILTIN_QueueControl: 0
-    - _BUILTIN_QueueOffset: 0
-    - _BlendValue: 0.05
-    - _SKYOUTPUT: 0
-    - _TimeOfDay: 0
-    - _TimeScale: 1
-    m_Colors: []
-  m_BuildTextureStacks: []
 --- !u!1 &1652898261
 GameObject:
   m_ObjectHideFlags: 0
