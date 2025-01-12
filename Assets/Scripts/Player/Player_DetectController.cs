@@ -17,8 +17,8 @@ public class DetectController : MonoBehaviour
     #region Variables
 
     //Detecting
+    public bool isEquipped = false;
     public bool isDetecting = false;
-    public bool canDetect = false;
 
     //circle cast parameters to detect layer collision with items
     public float radius = 1f;          // Radius of the circle
@@ -89,7 +89,7 @@ public class DetectController : MonoBehaviour
 
     void Update()
     {
-        if (canDetect)
+        if (isEquipped)
         {
             detectCooldownTimer -= Time.deltaTime;
 

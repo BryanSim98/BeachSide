@@ -27,6 +27,7 @@ public class DigController : MonoBehaviour
 
     // Digging
     private Vector3 hitPoint;
+    public bool isEquipped = false;
     public bool isDigging = false;
     public bool canDig = false;
 

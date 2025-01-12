@@ -360,6 +360,8 @@ public class FirstPersonController : MonoBehaviour
 
         #endregion
 
+        SwapEquipment();
+
         CheckGround();
 
         if(enableHeadBob)
@@ -536,6 +538,45 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
+    private void SwapEquipment()
+    {
+        // Find DigController & DetectController component on a GameObject
+        DigController digController = gameObject.GetComponent<DigController>();
+        DetectController detectController = gameObject.GetComponent<DetectController>();
+
+        // Access the public variable
+        if (digController != null && detectController != null)
+        {
+            //shovel equipped
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                digController.isEquipped = true;
+                detectController.isEquipped = false;
+                Debug.Log("Shovel Equipped");
+            }
+
+
+            //metal detector equipped
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                digController.isEquipped = false;
+                detectController.isEquipped = true;
+                Debug.Log("Metal Detector Equipped");
+            }
+
+            else
+            {
+                return;
+
+            }
+        }
+
+        else
+        {
+            Debug.LogWarning("DigController OR DetectController not found on the GameObject!");
+        }
+    }
+
     #region FX
     private IEnumerator SpawnFXCoroutine(string id, float timeDelay, System.Action<bool> setActiveState)
     {
@@ -549,9 +590,6 @@ public class FirstPersonController : MonoBehaviour
     }
 
     #endregion
-
-
-
 }
 
 
